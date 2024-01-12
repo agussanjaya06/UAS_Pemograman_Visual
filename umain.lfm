@@ -1,0 +1,84 @@
+object TfrmMain: TTfrmMain
+  Left = 328
+  Height = 430
+  Top = 206
+  Width = 553
+  Caption = 'Main'
+  ClientHeight = 0
+  ClientWidth = 0
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.2.6.0'
+  object LNS: TLabel
+    Left = 147
+    Height = 30
+    Top = 141
+    Width = 61
+    Caption = 'Nama'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -22
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object StaticText1: TStaticText
+    Left = 77
+    Height = 80
+    Top = 32
+    Width = 398
+    Caption = 'Aplikasi Penjualan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -48
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    Left = 246
+    Top = 230
+    object MenuFile: TMenuItem
+      Caption = 'File'
+      object MenuLogin: TMenuItem
+        Caption = 'Login'
+        OnClick = MenuLoginClick
+      end
+      object MenuLogout: TMenuItem
+        Caption = 'Logout'
+        OnClick = MenuLogoutClick
+      end
+      object MenuExit: TMenuItem
+        Caption = 'Exit'
+        OnClick = MenuExitClick
+      end
+    end
+    object MenuDataMaster: TMenuItem
+      Caption = 'Data Master'
+      object MenuDataBarang: TMenuItem
+        Caption = 'Data Barang'
+        OnClick = MenuDataBarangClick
+      end
+      object MenuDataKategoriBarang: TMenuItem
+        Caption = 'Data Kategori Barang'
+        OnClick = MenuDataKategoriBarangClick
+      end
+      object MenuDataCustomer: TMenuItem
+        Caption = 'Data Customer'
+        OnClick = MenuDataCustomerClick
+      end
+    end
+    object MenuTransaksi: TMenuItem
+      Caption = 'Transaksi'
+      OnClick = MenuTransaksiClick
+    end
+    object MenuLaporan: TMenuItem
+      Caption = 'Laporan'
+      OnClick = MenuLaporanClick
+    end
+  end
+end
